@@ -1,0 +1,55 @@
+﻿<Window x:Class="BPR.ChangePlaneWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:local="clr-namespace:BPR"
+ mc:Ignorable="d"
+ Icon="app.ico"
+ xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+ Title="Окно изменения самолета" Height="625" Width="375" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <DockPanel Panel.ZIndex="1" LastChildFill="False">
+            <Menu DockPanel.Dock="Top" Height="30">
+                <MenuItem x:Name="cancelRentPanel"  Header="Отменить бронь" Click="CancelRent_Click" Height="30" FontWeight="Medium"/>
+            </Menu>
+        </DockPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <TextBox HorizontalContentAlignment="Center" x:Name="textBoxPlaneName" materialDesign:HintAssist.Hint="Введите название самолета" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,40,0,15" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>
+                <TextBox HorizontalContentAlignment="Center" x:Name="textBoxPlaneYear" materialDesign:HintAssist.Hint="Введите год создания самолета" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,10,0,15" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>
+                <TextBox HorizontalContentAlignment="Center" x:Name="textBoxPlaneMaker" materialDesign:HintAssist.Hint="Введите производителя самолета" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,10,0,15" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>
+                <TextBox HorizontalContentAlignment="Center" x:Name="textBoxPlaneRegnum" materialDesign:HintAssist.Hint="Введите регистрационный номер самолета" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,10,0,15" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>
+                <TextBox HorizontalContentAlignment="Center" x:Name="textBoxPlaneCountry" materialDesign:HintAssist.Hint="Введите страну регистрации самолета" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,10,0,20" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>
+                <TextBlock Text="Выберите тип" FontSize="14" FontWeight="Medium" HorizontalAlignment="Center" Margin="0, 10, 0, 15"/>
+                <ComboBox SelectedIndex="0" x:Name="typeComboBox" Width="150" Height="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0, 0, 0, 15" FontWeight="Medium" Padding="6 6 -10 0">
+                    <ComboBoxItem Content="Jet"/>
+                    <ComboBoxItem Content="Turboprop"/>
+                    <ComboBoxItem Content="Glider"/>
+                </ComboBox>
+                <TextBlock Text="Выберите категорию" FontSize="14" FontWeight="Medium" HorizontalAlignment="Center" Margin="0, 10, 0, 15"/>
+                <ComboBox SelectedIndex="0" x:Name="categoryComboBox"  Width="150" Height="25" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0, 0, 0, 15" FontWeight="Medium" Padding="6 6 -10 0">
+                    <ComboBoxItem Content="Passenger"/>
+                    <ComboBoxItem Content="Cargo"/>
+                    <ComboBoxItem Content="Study"/>
+                    <ComboBoxItem Content="Military"/>
+                    <ComboBoxItem Content="Sport"/>
+                    <ComboBoxItem Content="Business"/>
+                </ComboBox>
+                <TextBox HorizontalContentAlignment="Center" x:Name="textBoxPlaneDescription" materialDesign:HintAssist.Hint="Введите описание самолета" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,10,0,15" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>
+                <TextBox HorizontalContentAlignment="Center" x:Name="textBoxPlaneTotalFly" materialDesign:HintAssist.Hint="Введите общий налет самолета (км)" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,10,0,15" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>
+                <TextBox HorizontalContentAlignment="Center" x:Name="textBoxPlanePrice" materialDesign:HintAssist.Hint="Введите цену аренды самолета (USD/per day)" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,10,0,15" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>
+                <TextBlock Text="Выберите первое (главное) фото самолета" FontSize="14" FontWeight="Medium" HorizontalAlignment="Center" Margin="0, 10, 0, 10"/>
+                <TextBlock Text="Внимание! Загружайте только горизонтальные, качественные и оптимизированные фото - самолет должен быть четко в центре и занимать весь кадр" FontSize="10" HorizontalAlignment="Center" TextAlignment="Center" Margin="0, 0, 0, 10" Height="45" Width="260" TextWrapping="Wrap"/>
+                <Button Click="PhotoNeedClick" Width="150" Content="ОБЗОР" Margin="0,0,0,15"/>
+                <TextBlock Text="Выберите второе фото самолета (необязательно)" FontSize="14" FontWeight="Medium" HorizontalAlignment="Center" Margin="0, 10, 0, 15"/>
+                <Button x:Name="photo1Button" IsEnabled="True" Click="Photo1Click" Width="150" Content="ОБЗОР" Margin="0,0,0,8"/>
+                <Button x:Name="photo1ButtonCancel" IsEnabled="False" Click="Photo1ClickCancel" Width="100" Height="25" Content="Отмена" Background="DarkRed" FontSize="12" Margin="0,0,0,15"/>
+                <TextBlock Text="Выберите третье фото самолета (необязательно)" FontSize="14" FontWeight="Medium" HorizontalAlignment="Center" Margin="0, 10, 0, 15"/>
+                <Button x:Name="photo2Button" IsEnabled="False" Click="Photo2Click" Width="150" Content="ОБЗОР" Margin="0,0,0,8"/>
+                <Button x:Name="photo2ButtonCancel" IsEnabled="False" Click="Photo2ClickCancel" Width="100" Height="25" Content="Отмена" Background="DarkRed" FontSize="12" Margin="0,0,0,15"/>
+                <Button Click="OkButtonClick" Width="150" Content="OK" Margin="0 25 0 20" Background="#4682B4" BorderBrush="#4682B4" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

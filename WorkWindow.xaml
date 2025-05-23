@@ -1,0 +1,67 @@
+﻿<Window x:Class="BPR.WorkWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BPR"
+        mc:Ignorable="d"
+        Icon="app.ico"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Основное окно" Height="800" Width="1150" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Image Source="background.jpg">
+            <Image.Effect>
+                <BlurEffect Radius="15"/>
+            </Image.Effect>
+        </Image>
+        <DockPanel Panel.ZIndex="1" LastChildFill="False">
+            <Menu DockPanel.Dock="Top" Height="30">
+                <!--меню сверху-->
+                <MenuItem Header="О нас" Click="AboutUs_Click" Height="30" FontWeight="Medium"/>
+                <!--элемент меню-->
+                <MenuItem Header="Справка" Click="Help_Click" Height="30" FontWeight="Medium"/>
+                <MenuItem x:Name="adminPanel" Header="Админ-панель" Height="30" FontWeight="Medium">
+                    <MenuItem Header="Добавить самолет" Click="AddPlane_Click" FontWeight="Medium"/>
+                    <MenuItem Header="Изменить самолет" Click="EditPlane_Click" FontWeight="Medium"/>
+                    <MenuItem Header="Удалить самолет" Click="RemovePlane_Click" FontWeight="Medium"/>
+                    <MenuItem Header="Учет бронирований (выставленные счета)" Click="Bills_Click" FontWeight="Medium"/>
+                    <MenuItem Header="Статистика" Click="Statistics_Click" FontWeight="Medium"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Border MinHeight="680" MaxHeight="680" Width="1100" Background="#FFFAFA"  CornerRadius="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="65*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Row="0" Grid.Column="0" Background="#C8F7F7" CornerRadius="10, 0, 0, 0">
+                    <Image Cursor="Hand" MouseLeftButtonDown="Filter_Click" x:Name="filter" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Source="filter.png" Width="30" Height="30" Margin="30 0" RenderOptions.BitmapScalingMode="HighQuality"/>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" Background="#C8F7F7">
+                    <Grid HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.25*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0"  KeyDown="TextBoxPlaneName_KeyDown" x:Name="textBoxPlaneName" materialDesign:HintAssist.Hint="Введите название самолета" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,4,0,15" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center"/>
+                        <Image Grid.Column="1" x:Name="search" Source="search.png" Width="25" Height="25" HorizontalAlignment="Left" Margin="15,0,0,-2" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="2" Background="#C8F7F7" CornerRadius="0, 10, 0, 0">
+                    <Grid>
+                        <Image Cursor="Hand" MouseLeftButtonDown="Sort_Click" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" x:Name="sort" Source="sort.png" Width="35" Height="35" Margin="30 0" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    </Grid>
+                </Border>
+                <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" x:Name="scrollViewer">
+                    <WrapPanel Orientation="Horizontal" x:Name="contentPanel" Margin="10"/>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="BPR.FilterWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:local="clr-namespace:BPR"
+ mc:Ignorable="d"
+ Icon="app.ico"
+ xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+ Title="Окно фильтра" Height="325" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Выберите тип" FontSize="18" FontWeight="Medium" HorizontalAlignment="Center" Margin="0, 10, 0, 20"/>
+            <ComboBox x:Name="typeComboBox" Width="150" Height="30" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0, 0, 0, 20" FontWeight="Medium" Padding="6 6 -10 0">
+                <ComboBoxItem Content="Все"/>
+                <ComboBoxItem Content="Jet"/>
+                <ComboBoxItem Content="Turboprop"/>
+                <ComboBoxItem Content="Glider"/>
+            </ComboBox>
+            <TextBlock Text="Выберите категорию" FontSize="18" FontWeight="Medium" HorizontalAlignment="Center" Margin="0, 10, 0, 20"/>
+            <ComboBox x:Name="categoryComboBox"  Width="150" Height="30" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0, 0, 0, 20" FontWeight="Medium" Padding="6 6 -10 0">
+                <ComboBoxItem Content="Все"/>
+                <ComboBoxItem Content="Passenger"/>
+                <ComboBoxItem Content="Cargo"/>
+                <ComboBoxItem Content="Study"/>
+                <ComboBoxItem Content="Military"/>
+                <ComboBoxItem Content="Sport"/>
+                <ComboBoxItem Content="Business"/>
+            </ComboBox>
+            <Button Click="OkButtonClick" Width="150" Content="OK" Margin="0 25 0 0" Background="#4682B4" BorderBrush="#4682B4" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
