@@ -7,7 +7,7 @@
  mc:Ignorable="d"
  Icon="app.ico"
  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
- Title="Окно удаления самолета" Height="195" Width="375" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+ Title="Окно удаления самолета" Height="190" Width="375" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <TextBox x:Name="textBoxPlaneRegnum" HorizontalContentAlignment="Center" materialDesign:HintAssist.Hint="Введите регистрационный номер самолета" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#191970" Margin="0,10,0,20" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center"/>

@@ -38,11 +38,11 @@ namespace BPR
             {
                 sortComboBox.SelectedIndex = 2;
             }
-            else if (selectedSort == "году создания (возрастание)")
+            else if (selectedSort == "году выпуска (возрастание)")
             {
                 sortComboBox.SelectedIndex = 3;
             }
-            else if (selectedSort == "году создания (убывание)")
+            else if (selectedSort == "году выпуска (убывание)")
             {
                 sortComboBox.SelectedIndex = 4;
             }

@@ -21,7 +21,7 @@ namespace BPR
     /// Логика взаимодействия для AddPlaneWindow.xaml
     /// </summary>
     public partial class AddPlaneWindow : Window
-    {//НА БУДУЩЕЕ - ОБРАЩАЙСЯ К БД НАПРЯМУЮ БЕЗ ПОДТЯГИВАНИЙ КОРТЕЖЕЙ СПИСКОМ А ТАК ПРОВЕРКИ ЧЕРЕЗ LINQ db.Planes.Any(условие);
+    {
         ApplicationContext db;
         List<Plane> planes;
         SolidColorBrush brushDefault;

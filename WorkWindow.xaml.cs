@@ -13,7 +13,7 @@ namespace BPR
     /// Логика взаимодействия для WorkWindow.xaml
     /// </summary>
     public partial class WorkWindow : Window
-    {//ОПТИМИЗАЦИЯ С LINQ ДАБЫ ИЗБАВИТЬСЯ ОТ ЗАВИСАНИЙ И ТОРМОЗОВ
+    {//НА БУДУЩЕЕ - ОБРАЩАЙСЯ К БД НАПРЯМУЮ БЕЗ ПОДТЯГИВАНИЙ КОРТЕЖЕЙ СПИСКОМ, А ТАК ПРОВЕРКИ ЧЕРЕЗ LINQ (db.Planes.Any(условие);) => СДЕЛАТЬ ОПТИМИЗАЦИЮ
         ApplicationContext db;
         List<User> users;
         List<Plane> planes;
@@ -136,11 +136,11 @@ namespace BPR
             {
                 sortedPlanes = filteredPlanes.OrderByDescending(plane => plane.price).ToList();
             }
-            else if (selectedSort == "году создания (возрастание)" && filteredPlanes.Any())
+            else if (selectedSort == "году выпуска (возрастание)" && filteredPlanes.Any())
             {
                 sortedPlanes = filteredPlanes.OrderBy(plane => plane.year).ToList();
             }
-            else if (selectedSort == "году создания (убывание)" && filteredPlanes.Any())
+            else if (selectedSort == "году выпуска (убывание)" && filteredPlanes.Any())
             {
                 sortedPlanes = filteredPlanes.OrderByDescending(plane => plane.year).ToList();
             }
@@ -227,7 +227,7 @@ namespace BPR
             stackPanel.Children.Add(planeTotalFly);
             TextBlock planePrice = new TextBlock()
             {
-                Text = '$' + plane.price.ToString("N0") + " сутки", //N -> форматированное число, а 0 -> кол-во знаков после запятой
+                Text = plane.price.ToString("N0") + " BYN сутки", //N -> форматированное число, а 0 -> кол-во знаков после запятой
                 FontSize = 14,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Margin = new Thickness(0, 10, 0, 0),
@@ -468,7 +468,7 @@ namespace BPR
             };
             TextBlock planeYear = new TextBlock()
             {
-                Text = "Год создания: " + currentPlane.year,
+                Text = "Год выпуска: " + currentPlane.year,
                 FontSize = 18,
                 HorizontalAlignment = HorizontalAlignment.Left,
                 Margin = new Thickness(0, 0, 0, 10),
@@ -762,10 +762,10 @@ void SetPlanes()
         case "цене (убывание)":
             query = query.OrderByDescending(p => p.price);
             break;
-        case "году создания (возрастание)":
+        case "году выпуска (возрастание)":
             query = query.OrderBy(p => p.year);
             break;
-        case "году создания (убывание)":
+        case "году выпуска (убывание)":
             query = query.OrderByDescending(p => p.year);
             break;
         case "общему налету (возрастание)":

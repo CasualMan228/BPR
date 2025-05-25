@@ -22,7 +22,7 @@ namespace BPR
     /// Логика взаимодействия для InputToRentPlaneWindow.xaml
     /// </summary>
     public partial class InputToRentPlaneWindow : Window 
-    {//ПЕЧАТЬ ВОРД ТИП ЧЕК
+    {
         ApplicationContext db;
         List<Plane> planes;
         List<Bill> bills;
@@ -80,7 +80,7 @@ namespace BPR
                     {
                         int totalPrice = int.Parse(days) * currentPlane.price;
                         string formattedTotalPrice = totalPrice.ToString("N0");
-                        MessageBoxResult result2 = MessageBox.Show($"Итого: ${formattedTotalPrice} за аренду этого самолета. Продолжить?", "Предупреждение", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                        MessageBoxResult result2 = MessageBox.Show($"Итого: {formattedTotalPrice} BYN за аренду этого самолета. Продолжить?", "Предупреждение", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                         if (result2 == MessageBoxResult.Yes)
                         {
                             var currentUser = users.FirstOrDefault(user => user.name == currentUserName);
@@ -107,7 +107,7 @@ namespace BPR
                             //
                             Word.Paragraph text2 = document.Content.Paragraphs.Add(); //добавить абзац
                             string fixedTotalPrice = bill.totalPrice.ToString("N0");
-                            text2.Range.Text = $"Сообщаем об успешном оформлении заявки на аренду самолета {currentPlane.name} на {bill.days} дн. – итоговая стоимость {fixedTotalPrice} USD (курс на {bill.date}).";
+                            text2.Range.Text = $"Сообщаем об успешном оформлении заявки на аренду самолета {currentPlane.name} на {bill.days} дн. – итоговая стоимость {fixedTotalPrice} BYN.";
                             text2.Range.Font.Name = "Calibri";
                             text2.Range.Font.Size = 12;
                             text2.Range.Font.Bold = 0;
@@ -131,8 +131,8 @@ namespace BPR
                             table.Borders.Enable = 1; //есть рамки
                             table.Cell(1, 1).Range.Text = "Лицо, совершившее аренду";
                             table.Cell(1, 2).Range.Text = currentUser.name;
-                            table.Cell(2, 1).Range.Text = "Роль лица в BPR";
-                            table.Cell(2, 2).Range.Text = currentUser.role;
+                            table.Cell(2, 1).Range.Text = "Дата заявки на аренду";
+                            table.Cell(2, 2).Range.Text = bill.date.ToString();
                             table.Cell(3, 1).Range.Text = "Название самолета";
                             table.Cell(3, 2).Range.Text = currentPlane.name;
                             table.Cell(4, 1).Range.Text = "Год выпуска";
@@ -242,7 +242,7 @@ namespace BPR
                 {
                     int totalPrice = int.Parse(days) * currentPlane.price;
                     string formattedTotalPrice = totalPrice.ToString("N0");
-                    MessageBoxResult result2 = MessageBox.Show($"Итого: ${formattedTotalPrice} за аренду этого самолета. Продолжить?", "Предупреждение", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                    MessageBoxResult result2 = MessageBox.Show($"Итого: {formattedTotalPrice} BYN за аренду этого самолета. Продолжить?", "Предупреждение", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                     if (result2 == MessageBoxResult.Yes)
                     {
                         var currentUser = users.FirstOrDefault(user => user.name == currentUserName);
@@ -269,7 +269,7 @@ namespace BPR
                         //
                         Word.Paragraph text2 = document.Content.Paragraphs.Add(); //добавить абзац
                         string fixedTotalPrice = bill.totalPrice.ToString("N0");
-                        text2.Range.Text = $"Сообщаем об успешном оформлении заявки на аренду самолета {currentPlane.name} на {bill.days} дн. – итоговая стоимость {fixedTotalPrice} USD (курс на {bill.date}).";
+                        text2.Range.Text = $"Сообщаем об успешном оформлении заявки на аренду самолета {currentPlane.name} на {bill.days} дн. – итоговая стоимость {fixedTotalPrice} BYN.";
                         text2.Range.Font.Name = "Calibri";
                         text2.Range.Font.Size = 12;
                         text2.Range.Font.Bold = 0;
@@ -293,8 +293,8 @@ namespace BPR
                         table.Borders.Enable = 1; //есть рамки
                         table.Cell(1, 1).Range.Text = "Лицо, совершившее аренду";
                         table.Cell(1, 2).Range.Text = currentUser.name;
-                        table.Cell(2, 1).Range.Text = "Роль лица в BPR";
-                        table.Cell(2, 2).Range.Text = currentUser.role;
+                        table.Cell(2, 1).Range.Text = "Дата заявки на аренду";
+                        table.Cell(2, 2).Range.Text = bill.date.ToString();
                         table.Cell(3, 1).Range.Text = "Название самолета";
                         table.Cell(3, 2).Range.Text = currentPlane.name;
                         table.Cell(4, 1).Range.Text = "Год выпуска";

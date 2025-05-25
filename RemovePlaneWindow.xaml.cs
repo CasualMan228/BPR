@@ -19,7 +19,7 @@ namespace BPR
     /// Логика взаимодействия для RemovePlaneWindow.xaml
     /// </summary>
     public partial class RemovePlaneWindow : Window
-    {//В БУДУЩЕМ ПРИ УЛУЧШЕНИИ ЭТОГО ВСЕГО ЛУЧШЕ ЮЗАТЬ LINQ
+    {
         ApplicationContext db;
         List<Plane> planes;
         SolidColorBrush brushDefault;

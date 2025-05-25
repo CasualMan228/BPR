@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace BPR
-{ //ЛИКВИДИРОВАТЬ ЗАГЛУШКИ И ПРОПИСАТЬ СТАТИСТИКУ
+{
     /// <summary>
     /// Логика взаимодействия для SelectToStatisticsWindow.xaml
     /// </summary>
@@ -35,128 +35,6 @@ namespace BPR
             var wordApp = new Word.Application();
             wordApp.Visible = true; //запустить Word
             Word.Document document = wordApp.Documents.Add(); //добавить документ
-            Word.Paragraph text = document.Content.Paragraphs.Add(); //добавить абзац
-            text.Range.Text = "Таблица выставленных счетов (BILLS)";
-            text.Range.Font.Name = "Calibri";
-            text.Range.Font.Size = 16;
-            text.Range.Font.Bold = 1; //жирный
-            text.Format.FirstLineIndent = wordApp.CentimetersToPoints(-1); //сдвиг текста по горизонтальной линейке
-            text.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter; //выравнивание по центру
-            text.Range.InsertParagraphAfter(); //вставить абзац (последующий)
-            //
-            bills = db.Bills.ToList();
-            Word.Table table = document.Tables.Add(document.Bookmarks["\\endofdoc"].Range, bills.Count + 1, 7); //добавить таблицу + document.Bookmarks[...].Range -> куда вставить + строки + столбцы
-            table.Range.Font.Name = "Calibri";
-            table.Range.Font.Size = 9;
-            table.Borders.Enable = 1; //есть рамки
-            table.Cell(1, 1).Range.Text = "Id"; //первая строка + первый столбец
-            table.Cell(1, 2).Range.Text = "UserId";
-            table.Cell(1, 3).Range.Text = "PlaneId";
-            table.Cell(1, 4).Range.Text = "Days";
-            table.Cell(1, 5).Range.Text = "TotalPrice (USD)";
-            table.Cell(1, 6).Range.Text = "Date";
-            table.Cell(1, 7).Range.Text = "IsRentNow";
-            table.Rows[1].Range.Font.Bold = 1; //сделать первую строку жирной
-            table.Rows[1].Shading.BackgroundPatternColor = Word.WdColor.wdColorLightTurquoise;
-            for (int i = 0; i < bills.Count; i++)
-            {
-                var bill = bills[i];
-                int row = i + 2;
-                table.Cell(row, 1).Range.Text = bill.id.ToString();
-                table.Cell(row, 2).Range.Text = bill.userId.ToString();
-                table.Cell(row, 3).Range.Text = bill.planeId.ToString();
-                table.Cell(row, 4).Range.Text = bill.days.ToString();
-                table.Cell(row, 5).Range.Text = bill.totalPrice.ToString();
-                table.Cell(row, 6).Range.Text = bill.date.ToString();
-                table.Cell(row, 7).Range.Text = bill.isRentNow.ToString();
-            }
-            //
-            Word.Paragraph emptyParagraph = document.Content.Paragraphs.Add();
-            emptyParagraph.Range.InsertParagraphAfter();
-            emptyParagraph.Range.InsertBreak(Word.WdBreakType.wdPageBreak); //сделать разрыв страницы
-            //
-            Word.Paragraph text2 = document.Content.Paragraphs.Add(); //добавить абзац
-            text2.Range.Text = "Таблица самолетов (PLANES)";
-            text2.Range.Font.Name = "Calibri";
-            text2.Range.Font.Size = 16;
-            text2.Range.Font.Bold = 1; //жирный
-            text2.Format.FirstLineIndent = wordApp.CentimetersToPoints(-1); //сдвиг текста по горизонтальной линейке
-            text2.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter; //выравнивание по центру
-            text2.Range.InsertParagraphAfter(); //вставить абзац (последующий)
-            //
-            planes = db.Planes.ToList();
-            Word.Table table2 = document.Tables.Add(document.Bookmarks["\\endofdoc"].Range, planes.Count + 1, 11); //добавить таблицу + document.Bookmarks[...].Range -> куда вставить + строки + столбцы
-            table2.Range.Font.Name = "Calibri";
-            table2.Range.Font.Size = 9;
-            table2.Borders.Enable = 1; //есть рамки
-            table2.Cell(1, 1).Range.Text = "Id"; //первая строка + первый столбец
-            table2.Cell(1, 2).Range.Text = "Name";
-            table2.Cell(1, 3).Range.Text = "Year";
-            table2.Cell(1, 4).Range.Text = "Maker";
-            table2.Cell(1, 5).Range.Text = "Regnum";
-            table2.Cell(1, 6).Range.Text = "Country";
-            table2.Cell(1, 7).Range.Text = "Type";
-            table2.Cell(1, 8).Range.Text = "Category";
-            table2.Cell(1, 9).Range.Text = "TotalFly (km)";
-            table2.Cell(1, 10).Range.Text = "Price (USD/per day)";
-            table2.Cell(1, 11).Range.Text = "Description";
-            table2.Rows[1].Range.Font.Bold = 1; //сделать первую строку жирной
-            table2.Rows[1].Shading.BackgroundPatternColor = Word.WdColor.wdColorLightTurquoise;
-            for (int i = 0; i < planes.Count; i++)
-            {
-                var plane = planes[i];
-                int row = i + 2;
-                table2.Cell(row, 1).Range.Text = plane.id.ToString();
-                table2.Cell(row, 2).Range.Text = plane.name;
-                table2.Cell(row, 3).Range.Text = plane.year.ToString();
-                table2.Cell(row, 4).Range.Text = plane.maker;
-                table2.Cell(row, 5).Range.Text = plane.regnum;
-                table2.Cell(row, 6).Range.Text = plane.country;
-                table2.Cell(row, 7).Range.Text = plane.type;
-                table2.Cell(row, 8).Range.Text = plane.category;
-                table2.Cell(row, 9).Range.Text = plane.totalFly.ToString();
-                table2.Cell(row, 10).Range.Text = plane.price.ToString();
-                table2.Cell(row, 11).Range.Text = plane.description;
-            }
-            //
-            Word.Paragraph emptyParagraph2 = document.Content.Paragraphs.Add();
-            emptyParagraph2.Range.InsertParagraphAfter();
-            emptyParagraph2.Range.InsertBreak(Word.WdBreakType.wdPageBreak); //сделать разрыв страницы
-            //
-            Word.Paragraph text3 = document.Content.Paragraphs.Add(); //добавить абзац
-            text3.Range.Text = "Таблица пользователей (USERS)";
-            text3.Range.Font.Name = "Calibri";
-            text3.Range.Font.Size = 16;
-            text3.Range.Font.Bold = 1; //жирный
-            text3.Format.FirstLineIndent = wordApp.CentimetersToPoints(-1); //сдвиг текста по горизонтальной линейке
-            text3.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter; //выравнивание по центру
-            text3.Range.InsertParagraphAfter(); //вставить абзац (последующий)
-            //
-            users = db.Users.ToList();
-            Word.Table table3 = document.Tables.Add(document.Bookmarks["\\endofdoc"].Range, users.Count + 1, 4); //добавить таблицу + document.Bookmarks[...].Range -> куда вставить + строки + столбцы
-            table3.Range.Font.Name = "Calibri";
-            table3.Range.Font.Size = 9;
-            table3.Borders.Enable = 1; //есть рамки
-            table3.Cell(1, 1).Range.Text = "Id"; //первая строка + первый столбец
-            table3.Cell(1, 2).Range.Text = "Name";
-            table3.Cell(1, 3).Range.Text = "Role";
-            table3.Cell(1, 4).Range.Text = "Pass";
-            table3.Rows[1].Range.Font.Bold = 1; //сделать первую строку жирной
-            table3.Rows[1].Shading.BackgroundPatternColor = Word.WdColor.wdColorLightTurquoise;
-            for (int i = 0; i < users.Count; i++)
-            {
-                var user = users[i];
-                int row = i + 2;
-                table3.Cell(row, 1).Range.Text = user.id.ToString();
-                table3.Cell(row, 2).Range.Text = user.name;
-                table3.Cell(row, 3).Range.Text = user.role;
-                table3.Cell(row, 4).Range.Text = user.pass;
-            }
-            //
-            Word.Paragraph emptyParagraph3 = document.Content.Paragraphs.Add();
-            emptyParagraph3.Range.InsertParagraphAfter();
-            emptyParagraph3.Range.InsertBreak(Word.WdBreakType.wdPageBreak); //сделать разрыв страницы
-            //
             Word.Paragraph text4 = document.Content.Paragraphs.Add(); //добавить абзац
             text4.Range.Text = "Общая статистика";
             text4.Range.Font.Name = "Calibri";
@@ -216,9 +94,9 @@ namespace BPR
             textw5.Alignment = Word.WdParagraphAlignment.wdAlignParagraphLeft;
             textw5.Range.InsertParagraphAfter();
             //6
-            string textq6 = db.Bills.Sum(b => b.totalPrice).ToString();
+            string textq6 = db.Bills.Sum(b => b.totalPrice).ToString("N0");
             Word.Paragraph textw6 = document.Content.Paragraphs.Add(); //добавить абзац
-            textw6.Range.Text = $"Общая выручка (USD): {textq6}";
+            textw6.Range.Text = $"Общая выручка (BYN): {textq6}";
             textw6.Range.Font.Name = "Calibri";
             textw6.Range.Font.Size = 12;
             textw6.Range.Font.Bold = 0;
@@ -318,6 +196,131 @@ namespace BPR
             textw11.Format.FirstLineIndent = wordApp.CentimetersToPoints(-1);
             textw11.Alignment = Word.WdParagraphAlignment.wdAlignParagraphLeft;
             textw11.Range.InsertParagraphAfter();
+            //
+            Word.Paragraph emptyParagraph3 = document.Content.Paragraphs.Add();
+            emptyParagraph3.Range.InsertParagraphAfter();
+            emptyParagraph3.Range.InsertBreak(Word.WdBreakType.wdPageBreak); //сделать разрыв страницы
+            //
+            Word.Paragraph text = document.Content.Paragraphs.Add(); //добавить абзац
+            text.Range.Text = "Таблица выставленных счетов (BILLS)";
+            text.Range.Font.Name = "Calibri";
+            text.Range.Font.Size = 16;
+            text.Range.Font.Bold = 1; //жирный
+            text.Format.FirstLineIndent = wordApp.CentimetersToPoints(-1); //сдвиг текста по горизонтальной линейке
+            text.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter; //выравнивание по центру
+            text.Range.InsertParagraphAfter(); //вставить абзац (последующий)
+            //
+            bills = db.Bills.ToList();
+            Word.Table table = document.Tables.Add(document.Bookmarks["\\endofdoc"].Range, bills.Count + 1, 7); //добавить таблицу + document.Bookmarks[...].Range -> куда вставить + строки + столбцы
+            table.Range.Font.Name = "Calibri";
+            table.Range.Font.Size = 9;
+            table.Borders.Enable = 1; //есть рамки
+            table.Cell(1, 1).Range.Text = "Id"; //первая строка + первый столбец
+            table.Cell(1, 2).Range.Text = "UserId";
+            table.Cell(1, 3).Range.Text = "PlaneId";
+            table.Cell(1, 4).Range.Text = "Days";
+            table.Cell(1, 5).Range.Text = "TotalPrice (BYN)";
+            table.Cell(1, 6).Range.Text = "Date";
+            table.Cell(1, 7).Range.Text = "IsRentNow";
+            table.Rows[1].Range.Font.Bold = 1; //сделать первую строку жирной
+            table.Rows[1].Shading.BackgroundPatternColor = Word.WdColor.wdColorLightTurquoise;
+            for (int i = 0; i < bills.Count; i++)
+            {
+                var bill = bills[i];
+                int row = i + 2;
+                table.Cell(row, 1).Range.Text = bill.id.ToString();
+                table.Cell(row, 2).Range.Text = bill.userId.ToString();
+                table.Cell(row, 3).Range.Text = bill.planeId.ToString();
+                table.Cell(row, 4).Range.Text = bill.days.ToString();
+                table.Cell(row, 5).Range.Text = bill.totalPrice.ToString();
+                table.Cell(row, 6).Range.Text = bill.date.ToString();
+                table.Cell(row, 7).Range.Text = bill.isRentNow.ToString();
+                table.Rows[row].Range.Font.Bold = 0;
+            }
+            //
+            Word.Paragraph emptyParagraph = document.Content.Paragraphs.Add();
+            emptyParagraph.Range.InsertParagraphAfter();
+            emptyParagraph.Range.InsertBreak(Word.WdBreakType.wdPageBreak); //сделать разрыв страницы
+            //
+            Word.Paragraph text2 = document.Content.Paragraphs.Add(); //добавить абзац
+            text2.Range.Text = "Таблица самолетов (PLANES)";
+            text2.Range.Font.Name = "Calibri";
+            text2.Range.Font.Size = 16;
+            text2.Range.Font.Bold = 1; //жирный
+            text2.Format.FirstLineIndent = wordApp.CentimetersToPoints(-1); //сдвиг текста по горизонтальной линейке
+            text2.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter; //выравнивание по центру
+            text2.Range.InsertParagraphAfter(); //вставить абзац (последующий)
+            //
+            planes = db.Planes.ToList();
+            Word.Table table2 = document.Tables.Add(document.Bookmarks["\\endofdoc"].Range, planes.Count + 1, 11); //добавить таблицу + document.Bookmarks[...].Range -> куда вставить + строки + столбцы
+            table2.Range.Font.Name = "Calibri";
+            table2.Range.Font.Size = 9;
+            table2.Borders.Enable = 1; //есть рамки
+            table2.Cell(1, 1).Range.Text = "Id"; //первая строка + первый столбец
+            table2.Cell(1, 2).Range.Text = "Name";
+            table2.Cell(1, 3).Range.Text = "Year";
+            table2.Cell(1, 4).Range.Text = "Maker";
+            table2.Cell(1, 5).Range.Text = "Regnum";
+            table2.Cell(1, 6).Range.Text = "Country";
+            table2.Cell(1, 7).Range.Text = "Type";
+            table2.Cell(1, 8).Range.Text = "Category";
+            table2.Cell(1, 9).Range.Text = "TotalFly (km)";
+            table2.Cell(1, 10).Range.Text = "Price (BYN/per day)";
+            table2.Cell(1, 11).Range.Text = "Description";
+            table2.Rows[1].Range.Font.Bold = 1; //сделать первую строку жирной
+            table2.Rows[1].Shading.BackgroundPatternColor = Word.WdColor.wdColorLightTurquoise;
+            for (int i = 0; i < planes.Count; i++)
+            {
+                var plane = planes[i];
+                int row = i + 2;
+                table2.Cell(row, 1).Range.Text = plane.id.ToString();
+                table2.Cell(row, 2).Range.Text = plane.name;
+                table2.Cell(row, 3).Range.Text = plane.year.ToString();
+                table2.Cell(row, 4).Range.Text = plane.maker;
+                table2.Cell(row, 5).Range.Text = plane.regnum;
+                table2.Cell(row, 6).Range.Text = plane.country;
+                table2.Cell(row, 7).Range.Text = plane.type;
+                table2.Cell(row, 8).Range.Text = plane.category;
+                table2.Cell(row, 9).Range.Text = plane.totalFly.ToString();
+                table2.Cell(row, 10).Range.Text = plane.price.ToString();
+                table2.Cell(row, 11).Range.Text = plane.description;
+                table2.Rows[row].Range.Font.Bold = 0;
+            }
+            //
+            Word.Paragraph emptyParagraph2 = document.Content.Paragraphs.Add();
+            emptyParagraph2.Range.InsertParagraphAfter();
+            emptyParagraph2.Range.InsertBreak(Word.WdBreakType.wdPageBreak); //сделать разрыв страницы
+            //
+            Word.Paragraph text3 = document.Content.Paragraphs.Add(); //добавить абзац
+            text3.Range.Text = "Таблица пользователей (USERS)";
+            text3.Range.Font.Name = "Calibri";
+            text3.Range.Font.Size = 16;
+            text3.Range.Font.Bold = 1; //жирный
+            text3.Format.FirstLineIndent = wordApp.CentimetersToPoints(-1); //сдвиг текста по горизонтальной линейке
+            text3.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter; //выравнивание по центру
+            text3.Range.InsertParagraphAfter(); //вставить абзац (последующий)
+            //
+            users = db.Users.ToList();
+            Word.Table table3 = document.Tables.Add(document.Bookmarks["\\endofdoc"].Range, users.Count + 1, 4); //добавить таблицу + document.Bookmarks[...].Range -> куда вставить + строки + столбцы
+            table3.Range.Font.Name = "Calibri";
+            table3.Range.Font.Size = 9;
+            table3.Borders.Enable = 1; //есть рамки
+            table3.Cell(1, 1).Range.Text = "Id"; //первая строка + первый столбец
+            table3.Cell(1, 2).Range.Text = "Name";
+            table3.Cell(1, 3).Range.Text = "Role";
+            table3.Cell(1, 4).Range.Text = "Pass";
+            table3.Rows[1].Range.Font.Bold = 1; //сделать первую строку жирной
+            table3.Rows[1].Shading.BackgroundPatternColor = Word.WdColor.wdColorLightTurquoise;
+            for (int i = 0; i < users.Count; i++)
+            {
+                var user = users[i];
+                int row = i + 2;
+                table3.Cell(row, 1).Range.Text = user.id.ToString();
+                table3.Cell(row, 2).Range.Text = user.name;
+                table3.Cell(row, 3).Range.Text = user.role;
+                table3.Cell(row, 4).Range.Text = user.pass;
+                table3.Rows[row].Range.Font.Bold = 0;
+            }
         }
 
         private void OkButtonClick(object sender, RoutedEventArgs e)

@@ -15,8 +15,8 @@
                 <ComboBoxItem Content="умолчанию"/>
                 <ComboBoxItem Content="цене (возрастание)"/>
                 <ComboBoxItem Content="цене (убывание)"/>
-                <ComboBoxItem Content="году создания (возрастание)"/>
-                <ComboBoxItem Content="году создания (убывание)"/>
+                <ComboBoxItem Content="году выпуска (возрастание)"/>
+                <ComboBoxItem Content="году выпуска (убывание)"/>
                 <ComboBoxItem Content="общему налету (возрастание)"/>
                 <ComboBoxItem Content="общему налету (убывание)"/>
             </ComboBox>

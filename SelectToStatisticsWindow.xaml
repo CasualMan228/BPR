@@ -16,11 +16,11 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <StackPanel>
+                <StackPanel Grid.ColumnSpan="2">
                     <Button Grid.Column="0" Click="WordButtonClick" Width="125" Content="Word" Margin="0 0 0 0" Background="#4682B4" BorderBrush="#4682B4" HorizontalAlignment="Center"/>
                     <TextBlock Grid.Column="0" Text="MS Word должен быть установлен!" FontSize="10" HorizontalAlignment="Center" TextAlignment="Center" Height="30" Width="110" TextWrapping="Wrap" Margin="0 5 0 0"/>
                 </StackPanel>
-                <Button IsEnabled="False" Grid.Column="1" Click="StatisticsButtonClick" Width="125" Content="В окне" Margin="0 0 0 0" Background="#4682B4" BorderBrush="#4682B4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <!--<Button IsEnabled="False" Grid.Column="1" Click="StatisticsButtonClick" Width="125" Content="В окне" Margin="0 0 0 0" Background="#4682B4" BorderBrush="#4682B4" HorizontalAlignment="Center" VerticalAlignment="Top"/>-->
             </Grid>
             <Button Click="OkButtonClick" Width="150" Content="OK" Margin="0 25 0 0" Background="#4682B4" BorderBrush="#4682B4" HorizontalAlignment="Center"/>
         </StackPanel>

@@ -15,7 +15,7 @@ using System.Xml.Linq;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace BPR
-{ //СЧЕТА ПРОПИСАТЬ В ОКНЕ КАК БУДЕТ ВЫГЛЯДЕТЬ
+{
     /// <summary>
     /// Логика взаимодействия для SelectToBillsWindow.xaml
     /// </summary>
@@ -50,21 +50,19 @@ namespace BPR
             text.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter; //выравнивание по центру
             text.Range.InsertParagraphAfter(); //вставить абзац (последующий)
             bills = db.Bills.ToList();
-            Word.Table table = document.Tables.Add(document.Bookmarks["\\endofdoc"].Range, bills.Count + 1, 10);
+            Word.Table table = document.Tables.Add(document.Bookmarks["\\endofdoc"].Range, bills.Count + 1, 8);
             //добавить таблицу + document.Bookmarks[...].Range -> куда вставить + строки + столбцы
             table.Range.Font.Name = "Calibri";
             table.Range.Font.Size = 9;
             table.Borders.Enable = 1; //есть рамки
             table.Cell(1, 1).Range.Text = "Id"; //первая строка + первый столбец
-            table.Cell(1, 2).Range.Text = "UserId";
-            table.Cell(1, 3).Range.Text = "UserName";
-            table.Cell(1, 4).Range.Text = "UserRole";
-            table.Cell(1, 5).Range.Text = "PlaneId";
-            table.Cell(1, 6).Range.Text = "Regnum";
-            table.Cell(1, 7).Range.Text = "Days";
-            table.Cell(1, 8).Range.Text = "TotalPrice (USD)";
-            table.Cell(1, 9).Range.Text = "Date";
-            table.Cell(1, 10).Range.Text = "IsRentNow";
+            table.Cell(1, 2).Range.Text = "UserName";
+            table.Cell(1, 3).Range.Text = "UserRole";
+            table.Cell(1, 4).Range.Text = "Regnum";
+            table.Cell(1, 5).Range.Text = "Days";
+            table.Cell(1, 6).Range.Text = "TotalPrice (BYN)";
+            table.Cell(1, 7).Range.Text = "Date";
+            table.Cell(1, 8).Range.Text = "IsRentNow";
             table.Rows[1].Range.Font.Bold = 1; //сделать первую строку жирной
             table.Rows[1].Shading.BackgroundPatternColor = Word.WdColor.wdColorLightTurquoise;
             planes = db.Planes.ToList();
@@ -74,17 +72,16 @@ namespace BPR
                 var bill = bills[i];
                 int row = i + 2;
                 table.Cell(row, 1).Range.Text = bill.id.ToString();
-                table.Cell(row, 2).Range.Text = bill.userId.ToString();
                 var foundUser = users.FirstOrDefault(user => user.id == bill.userId);
-                table.Cell(row, 3).Range.Text = foundUser.name;
-                table.Cell(row, 4).Range.Text = foundUser.role;
-                table.Cell(row, 5).Range.Text = bill.planeId.ToString();
+                table.Cell(row, 2).Range.Text = foundUser == null ? "USER NOT FOUND" : foundUser.name;
+                table.Cell(row, 3).Range.Text = foundUser == null ? "USER NOT FOUND" : foundUser.role;
                 var foundPlane = planes.FirstOrDefault(plane => plane.id == bill.planeId);
-                table.Cell(row, 6).Range.Text = foundPlane.regnum.ToString();
-                table.Cell(row, 7).Range.Text = bill.days.ToString();
-                table.Cell(row, 8).Range.Text = bill.totalPrice.ToString();
-                table.Cell(row, 9).Range.Text = bill.date.ToString();
-                table.Cell(row, 10).Range.Text = bill.isRentNow.ToString();
+                table.Cell(row, 4).Range.Text = foundPlane == null ? "PLANE NOT FOUND" : foundPlane.regnum.ToString();
+                table.Cell(row, 5).Range.Text = bill.days.ToString();
+                table.Cell(row, 6).Range.Text = bill.totalPrice.ToString();
+                table.Cell(row, 7).Range.Text = bill.date.ToString();
+                table.Cell(row, 8).Range.Text = bill.isRentNow.ToString();
+                table.Rows[row].Range.Font.Bold = 0;
             }
         }
 
