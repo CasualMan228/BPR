@@ -17,6 +17,7 @@
         <DockPanel LastChildFill="False">
             <Menu DockPanel.Dock="Top" Height="30">
                 <MenuItem Header="О нас" Click="AboutUs_Click" Height="30" FontWeight="Medium"/>
+                <MenuItem Header="Справка" Click="Help_Click" Height="30" FontWeight="Medium"/>
                 <!--<MenuItem Header="Админ-панель" Height="40"/>-->
             </Menu>
         </DockPanel>

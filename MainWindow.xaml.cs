@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace BPR 
 {
@@ -143,6 +144,11 @@ namespace BPR
                 workWindow.Show();
                 this.Close();
             }
+        }
+
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("help.chm");
         }
     }
 }

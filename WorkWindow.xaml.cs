@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows;
@@ -557,7 +558,7 @@ namespace BPR
         }
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("...", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
+            Process.Start("help.chm");
         }
         private void AboutUs_Click(object sender, RoutedEventArgs e)
         {

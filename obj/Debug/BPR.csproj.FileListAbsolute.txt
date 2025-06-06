@@ -93,3 +93,5 @@ D:\ProjectsVS\2025\BPR\BPR\obj\Debug\SelectToStatisticsWindow.g.cs
 D:\ProjectsVS\2025\BPR\BPR\obj\Debug\SelectToStatisticsWindow.baml
 D:\ProjectsVS\2025\BPR\BPR\obj\Debug\InputToRentPlaneWindow.g.cs
 D:\ProjectsVS\2025\BPR\BPR\obj\Debug\InputToRentPlaneWindow.baml
+D:\ProjectsVS\2025\BPR\BPR\obj\Debug\BPR_Content.g.cs
+D:\ProjectsVS\2025\BPR\BPR\bin\Debug\help.chm

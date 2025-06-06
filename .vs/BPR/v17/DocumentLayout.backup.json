@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "D:\\ProjectsVS\\2025\\BPR\\BPR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\inputtorentplanewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:inputtorentplanewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\workwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|d:\\projectsvs\\2025\\bpr\\bpr\\workwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:workwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\selecttostatisticswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:selecttostatisticswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\changeplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:changeplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\inputtorentplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:inputtorentplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\WorkWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:WorkWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\inputtorentplanewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:inputtorentplanewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\SortWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,20 +71,8 @@
       "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:selecttobillswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\selecttostatisticswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:selecttostatisticswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|d:\\projectsvs\\2025\\bpr\\bpr\\selecttostatisticswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\selecttostatisticswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:selecttostatisticswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\changeplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:changeplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\inputtorentplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:inputtorentplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\selecttochangeplanewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -91,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:SortWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\WorkWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:WorkWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|D:\\ProjectsVS\\2025\\BPR\\BPR\\filterwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A3E40C69-60F4-4B1C-9F9E-3DF166C40D98}|BPR.csproj|solutionrelative:filterwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -106,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,13 +114,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "WorkWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\WorkWindow.xaml.cs",
               "RelativeDocumentMoniker": "WorkWindow.xaml.cs",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\WorkWindow.xaml.cs",
               "RelativeToolTip": "WorkWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABsCAAAAAAAAAAAewDACAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T08:44:57.573Z",
               "IsPinned": true,
@@ -128,13 +128,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAiwFAAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAawJYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T18:13:34.236Z",
               "IsPinned": true,
@@ -148,7 +148,7 @@
               "RelativeDocumentMoniker": "LoginWindow.xaml.cs",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\LoginWindow.xaml.cs",
               "RelativeToolTip": "LoginWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAawG4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T09:38:49.615Z",
               "IsPinned": true,
@@ -232,19 +232,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
+              "Title": "InputToRentPlaneWindow.xaml.cs",
+              "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\InputToRentPlaneWindow.xaml.cs",
+              "RelativeDocumentMoniker": "InputToRentPlaneWindow.xaml.cs",
+              "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\InputToRentPlaneWindow.xaml.cs",
+              "RelativeToolTip": "InputToRentPlaneWindow.xaml.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAmwIMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T16:34:02.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "SelectToStatisticsWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToStatisticsWindow.xaml",
               "RelativeDocumentMoniker": "SelectToStatisticsWindow.xaml",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToStatisticsWindow.xaml",
               "RelativeToolTip": "SelectToStatisticsWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T11:22:34.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T11:22:34.062Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 4,
               "Title": "SelectToStatisticsWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToStatisticsWindow.xaml.cs",
               "RelativeDocumentMoniker": "SelectToStatisticsWindow.xaml.cs",
@@ -252,37 +263,22 @@
               "RelativeToolTip": "SelectToStatisticsWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T11:24:41.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T11:24:41.716Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InputToRentPlaneWindow.xaml.cs",
-              "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\InputToRentPlaneWindow.xaml.cs",
-              "RelativeDocumentMoniker": "InputToRentPlaneWindow.xaml.cs",
-              "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\InputToRentPlaneWindow.xaml.cs",
-              "RelativeToolTip": "InputToRentPlaneWindow.xaml.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAWwIMAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T16:34:02.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-13T18:13:35.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T18:13:35.321Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "SelectToBillsWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToBillsWindow.xaml.cs",
               "RelativeDocumentMoniker": "SelectToBillsWindow.xaml.cs",
@@ -290,12 +286,11 @@
               "RelativeToolTip": "SelectToBillsWindow.xaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T05:44:18.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T05:44:18.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "ChangePlaneWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\ChangePlaneWindow.xaml.cs",
               "RelativeDocumentMoniker": "ChangePlaneWindow.xaml.cs",
@@ -303,24 +298,22 @@
               "RelativeToolTip": "ChangePlaneWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T07:57:58.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T07:57:58.717Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 5,
               "Title": "ChangePlaneWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\ChangePlaneWindow.xaml",
               "RelativeDocumentMoniker": "ChangePlaneWindow.xaml",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\ChangePlaneWindow.xaml",
               "RelativeToolTip": "ChangePlaneWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-14T07:57:51.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T07:57:51.745Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "AddPlaneWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\AddPlaneWindow.xaml.cs",
               "RelativeDocumentMoniker": "AddPlaneWindow.xaml.cs",
@@ -328,48 +321,44 @@
               "RelativeToolTip": "AddPlaneWindow.xaml.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAawBcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T09:43:33.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T09:43:33.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 6,
               "Title": "InputToRentPlaneWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\InputToRentPlaneWindow.xaml",
               "RelativeDocumentMoniker": "InputToRentPlaneWindow.xaml",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\InputToRentPlaneWindow.xaml",
               "RelativeToolTip": "InputToRentPlaneWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-17T16:33:52.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-17T16:33:52.056Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "SelectToChangePlaneWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToChangePlaneWindow.xaml",
               "RelativeDocumentMoniker": "SelectToChangePlaneWindow.xaml",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToChangePlaneWindow.xaml",
               "RelativeToolTip": "SelectToChangePlaneWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-14T07:23:53.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T07:23:53.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "SelectToBillsWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToBillsWindow.xaml",
               "RelativeDocumentMoniker": "SelectToBillsWindow.xaml",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToBillsWindow.xaml",
               "RelativeToolTip": "SelectToBillsWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-16T05:43:43.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T05:43:43.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "SelectToChangePlaneWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SelectToChangePlaneWindow.xaml.cs",
               "RelativeDocumentMoniker": "SelectToChangePlaneWindow.xaml.cs",
@@ -377,12 +366,11 @@
               "RelativeToolTip": "SelectToChangePlaneWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T07:24:17.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T07:24:17.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "RemovePlaneWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\RemovePlaneWindow.xaml.cs",
               "RelativeDocumentMoniker": "RemovePlaneWindow.xaml.cs",
@@ -390,24 +378,22 @@
               "RelativeToolTip": "RemovePlaneWindow.xaml.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T05:38:10.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T05:38:10.726Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "RemovePlaneWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\RemovePlaneWindow.xaml",
               "RelativeDocumentMoniker": "RemovePlaneWindow.xaml",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\RemovePlaneWindow.xaml",
               "RelativeToolTip": "RemovePlaneWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-13T05:29:21.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T05:29:21.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "AddPlaneWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\AddPlaneWindow.xaml",
               "RelativeDocumentMoniker": "AddPlaneWindow.xaml",
@@ -418,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "FilterWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\FilterWindow.xaml.cs",
               "RelativeDocumentMoniker": "FilterWindow.xaml.cs",
@@ -426,8 +412,7 @@
               "RelativeToolTip": "FilterWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T12:25:29.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T12:25:29.646Z"
             },
             {
               "$type": "Document",
@@ -442,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "SortWindow.xaml.cs",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SortWindow.xaml.cs",
               "RelativeDocumentMoniker": "SortWindow.xaml.cs",
@@ -450,12 +435,11 @@
               "RelativeToolTip": "SortWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T17:13:14.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-11T17:13:14.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "SortWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\SortWindow.xaml",
               "RelativeDocumentMoniker": "SortWindow.xaml",
@@ -466,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 8,
               "Title": "WorkWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\WorkWindow.xaml",
               "RelativeDocumentMoniker": "WorkWindow.xaml",
@@ -477,15 +461,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "D:\\ProjectsVS\\2025\\BPR\\BPR\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "LoginWindow.xaml",
               "ToolTip": "D:\\ProjectsVS\\2025\\BPR\\BPR\\LoginWindow.xaml",
               "RelativeToolTip": "LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-14T09:31:51.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T09:31:51.293Z"
             }
           ]
         }
